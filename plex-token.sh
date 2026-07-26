@@ -56,7 +56,10 @@ fi
 deadline=$(( $(date +%s) + expires_in ))
 
 err ""
-err "Go to https://plex.tv/link and enter: $pin_code"
+err "Open this to authorize (PIN is pre-filled):"
+err "  https://plex.tv/link?pin=$pin_code"
+err ""
+err "Or go to https://plex.tv/link and enter: $pin_code"
 err "Waiting for you to authorize (expires in $(( expires_in / 60 )) min)..."
 
 # --- poll for the token ---

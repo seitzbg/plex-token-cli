@@ -18,13 +18,19 @@ any third party. It's a CLI port of the browser-based
 ```
 
 You'll be asked for a product name (press Enter for the default). The script
-then prints a PIN:
+then prints a link with the PIN already filled in:
 
 ```
-Go to https://plex.tv/link and enter: ABCD
+Open this to authorize (PIN is pre-filled):
+  https://plex.tv/link?pin=ABCD
+
+Or go to https://plex.tv/link and enter: ABCD
 ```
 
-Open that URL in any browser, sign in to Plex if needed, and enter the PIN.
+Open the first URL in any browser, sign in to Plex if needed, and confirm.
+The second line is there for when you're authorizing from another device and
+have to type the PIN by hand.
+
 The script polls every 5 seconds and prints your token once you've authorized:
 
 ```
